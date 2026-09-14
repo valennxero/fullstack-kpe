@@ -1,5 +1,5 @@
 <?php
-require "db.php";
+require "connection.php";
 
 $error = "";
 $success = "";
