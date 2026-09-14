@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Request bukan file fisik di dalam folder berita
+# berita/teknologi-5g-di-indonesia
+# berita/add.php
+# berita/abu-vulkanik => akan diteruskan ke file index.php dengan uri tambahan
+# Tidak mencari file namun meneruskan teknologi-5g ke index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L] # Arahkan ke file index.php
